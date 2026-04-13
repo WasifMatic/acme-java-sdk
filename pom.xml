@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.zahran444</groupId>
   <artifactId>cli-publish-sdk</artifactId>
-  <version>1.0.11</version>
+  <version>1.0.17</version>
   <packaging>jar</packaging>
   <name>CLI Publish SDK</name>
   <description>CLI</description>
