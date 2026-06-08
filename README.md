@@ -23,12 +23,12 @@ Install the SDK by adding the following dependency in your project's pom.xml fil
 <dependency>
   <groupId>io.github.zahran444</groupId>
   <artifactId>cli-publish-sdk</artifactId>
-  <version>8.0.0</version>
+  <version>9.0.0</version>
 </dependency>
 ```
 
 You can also view the package at:
-https://central.sonatype.com/artifact/io.github.zahran444/cli-publish-sdk/8.0.0
+https://central.sonatype.com/artifact/io.github.zahran444/cli-publish-sdk/9.0.0
 
 ## Initialize the API Client
 
