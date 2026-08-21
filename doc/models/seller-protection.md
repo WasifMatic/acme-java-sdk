@@ -1,0 +1,25 @@
+
+# Seller Protection
+
+The level of protection offered as defined by [PayPal Seller Protection for Merchants](https://www.paypal.com/us/webapps/mpp/security/seller-protection).
+
+## Structure
+
+`SellerProtection`
+
+## Fields
+
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `Status` | [`SellerProtectionStatus`](../../doc/models/seller-protection-status.md) | Optional, Read-only | Indicates whether the transaction is eligible for seller protection. For information, see [PayPal Seller Protection for Merchants](https://www.paypal.com/us/webapps/mpp/security/seller-protection). | SellerProtectionStatus getStatus() | setStatus(SellerProtectionStatus status) |
+| `DisputeCategories` | [`List<DisputeCategory>`](../../doc/models/dispute-category.md) | Optional, Read-only | An array of conditions that are covered for the transaction. | List<DisputeCategory> getDisputeCategories() | setDisputeCategories(List<DisputeCategory> disputeCategories) |
+
+## Example
+
+```java
+import com.paypal.sdk.models.SellerProtection;
+
+SellerProtection sellerProtection = new SellerProtection.Builder()
+    .build();
+```
+

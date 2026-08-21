@@ -1,0 +1,34 @@
+
+# Venmo Experience Context
+
+A resource representing an experience context of vault a venmo account.
+
+## Structure
+
+`VenmoExperienceContext`
+
+## Fields
+
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `BrandName` | `String` | Optional | The label that overrides the business name in the PayPal account on the PayPal site. The pattern is defined by an external party and supports Unicode.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `127`, *Pattern*: `^.*$` | String getBrandName() | setBrandName(String brandName) |
+| `ShippingPreference` | [`ExperienceContextShippingPreference`](../../doc/models/experience-context-shipping-preference.md) | Optional | The shipping preference. This only applies to PayPal payment source.<br><br>**Default**: `ExperienceContextShippingPreference.GET_FROM_FILE`<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `255`, *Pattern*: `^[0-9A-Z_]+$` | ExperienceContextShippingPreference getShippingPreference() | setShippingPreference(ExperienceContextShippingPreference shippingPreference) |
+| `VaultInstruction` | [`VaultInstructionAction`](../../doc/models/vault-instruction-action.md) | Optional | DEPRECATED. Vault Instruction on action to be performed after a successful payer approval.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `255`, *Pattern*: `^[A-Z_]+$` | VaultInstructionAction getVaultInstruction() | setVaultInstruction(VaultInstructionAction vaultInstruction) |
+| `UserAction` | [`VaultUserAction`](../../doc/models/vault-user-action.md) | Optional | User Action on action to be performed after a successful payer approval.<br><br>**Default**: `VaultUserAction.CONTINUE`<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `255`, *Pattern*: `^[A-Z_]+$` | VaultUserAction getUserAction() | setUserAction(VaultUserAction userAction) |
+
+## Example
+
+```java
+import com.paypal.sdk.models.ExperienceContextShippingPreference;
+import com.paypal.sdk.models.VaultInstructionAction;
+import com.paypal.sdk.models.VaultUserAction;
+import com.paypal.sdk.models.VenmoExperienceContext;
+
+VenmoExperienceContext venmoExperienceContext = new VenmoExperienceContext.Builder()
+    .brandName("brand_name6")
+    .shippingPreference(ExperienceContextShippingPreference.GET_FROM_FILE)
+    .vaultInstruction(VaultInstructionAction.ON_CREATE_PAYMENT_TOKENS)
+    .userAction(VaultUserAction.CONTINUE)
+    .build();
+```
+
